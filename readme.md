@@ -69,57 +69,7 @@ Place a `recipes.json` file in the project root:
     "serves": 4
   }
 ]
-```
 
-### 4. Run the steps in order
-
-**Start the server** (auto-creates the database):
-```bash
-python app.py
-```
-
-**Load recipe data** (in a new terminal):
-```bash
-python load_data.py
-```
-
-**Fix missing ratings** *(optional)*:
-```bash
-python bulk_update_rating.py
-```
-
-The app will be available at `http://localhost:5000`
-
----
-
-## 📡 API Reference
-
-### Get All Recipes (Paginated)
-
-```
-GET /api/recipes?page=1&limit=15
-```
-
-### Search & Filter Recipes
-
-```
-GET /api/recipes/search
-```
-
-| Query Param | Type | Description |
-|---|---|---|
-| `title` | string | Partial match on recipe title |
-| `cuisine` | string | Partial match on cuisine type |
-| `rating_min` | float | Minimum rating (e.g. `4.0`) |
-| `serves` | int | Exact number of servings |
-
-**Examples:**
-```bash
-GET /api/recipes/search?title=pasta
-GET /api/recipes/search?cuisine=Indian
-GET /api/recipes/search?rating_min=4.5
-GET /api/recipes/search?cuisine=Italian&rating_min=4.0&serves=4
-```
 
 ---
 
@@ -154,16 +104,8 @@ GET /api/recipes/search?cuisine=Italian&rating_min=4.0&serves=4
 - `recipes.json` dataset in the project root
 - `frontend/index.html` for the UI
 
----
 
-## 🐛 Troubleshooting
 
-| Problem | Fix |
-|---|---|
-| `ModuleNotFoundError` | Run `pip install flask flask-sqlalchemy` |
-| `FileNotFoundError: recipes.json` | Make sure the JSON file is in the project root |
-| Frontend shows 404 | Ensure `frontend/index.html` exists |
-| Empty API results | Run `load_data.py` to populate the database |
 
 ---
 
