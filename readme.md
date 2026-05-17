@@ -69,9 +69,8 @@ Place a `recipes.json` file in the project root:
     "serves": 4
   }
 ]
+```
 
-
----
 
 ## 🗄️ Database Model
 
@@ -90,25 +89,8 @@ Place a `recipes.json` file in the project root:
 
 ---
 
-## 🛠️ Utility Scripts
-
-**`load_data.py`** — Reads `recipes.json` and inserts records into the database. Skips duplicates by title.
-
-**`bulk_update_rating.py`** — Sets all `NULL` ratings to `4.0`. Useful after initial data import.
-
----
-
-## 📌 Requirements
-
-- Python 3.8+
-- `recipes.json` dataset in the project root
-- `frontend/index.html` for the UI
-
-
-
-
----
-
 ## 📄 License
 
 MIT License. Feel free to use and modify.
+
+<img width="1919" height="955" alt="image" src="https://github.com/user-attachments/assets/bd66f114-7ec2-4ca4-afb1-a085f8e43aee" />
